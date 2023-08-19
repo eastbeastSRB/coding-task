@@ -1,3 +1,8 @@
+## Requirements
+
+Node v18+
+NPM 9.0+
+
 # coding-task
 
 This template should help get you started developing with Vue 3 in Vite.

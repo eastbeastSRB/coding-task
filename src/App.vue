@@ -1,14 +1,25 @@
-<script setup>
-// import { RouterLink, RouterView } from 'vue-router'
+<script>
+import { onMounted } from 'vue'
+import { useStore } from 'vuex'
+
+export default {
+  setup() {
+    const store = useStore()
+
+    // set list on app init
+    onMounted(() => {
+      store.dispatch('setUsersList', {})
+    })
+  }
+}
 </script>
 
 <template>
   <header>
     <div class="wrapper">
       <nav>
-        <!-- <RouterLink to="/">Home</RouterLink> -->
-        <!-- <RouterLink to="/about">About</RouterLink> -->
-        <!-- <RouterLink to="/user/1">Single user</RouterLink> -->
+        <!-- <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/about">About</RouterLink>-->
       </nav>
     </div>
   </header>

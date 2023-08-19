@@ -1,24 +1,19 @@
+// styles
 import './assets/main.scss'
 
+// basic config
 import { createApp } from 'vue'
+import { store } from "./store";
+
 import App from './App.vue'
 import router from './router'
+import vuetify from './plugins/vuetify-plugin'
 
-// Vuetify
-import 'vuetify/styles'
-import { createVuetify } from 'vuetify'
-import * as components from 'vuetify/components'
-import * as directives from 'vuetify/directives'
-
-const vuetify = createVuetify({
-  components,
-  directives,
-})
-
-
+// app
 const app = createApp(App)
 
 app.use(router)
 app.use(vuetify)
+app.use(store)
 
 app.mount('#app')
